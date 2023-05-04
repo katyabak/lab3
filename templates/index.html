@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8" />
+    <title>Решение квадратных уравнений</title>
+    <style type="text/css">
+    body {
+    background: linear-gradient(90deg, #b9deed, #56d4ff);
+    }
+    </style>
+  </head>
+    <body>
+    <h1 style="font-family:verdana;">Решение квадратных уравнений</h1>
+    <hr style="border-color: black; border-width: 3px;">
+    <p style="font-family:verdana;">Введите коэффиценты уравнения</p>
+    <div class="border border-primary square">
+    <form method="POST" action="{{ url_for('discriminant') }}">
+      <label for="a">a = </label>
+      <input type="number" name="a" id="a"><br><br>
+      <label for="b">b = </label>
+      <input type="number" name="b" id="b"><br><br>
+      <label for="c">c = </label>
+      <input type="number" name="c" id="c"><br><br>
+      <input type="submit" value="Решить">
+    </form>
+    </div>
+    <hr style="border-color: black">
+    <p style="font-family:verdana;">Дискриминант = {{D}}</p>
+    <p style="font-family:verdana;">Корни уравнения: </p>
+    <p style="font-family:verdana;">x1 = {{x1}}</p>
+    <p style="font-family:verdana;">x2 = {{x2}}</p>
+  </body>
+</html>
